@@ -1,26 +1,3 @@
-// import React from "react";
-// import Navbar from "./components/Navbar";
-// import SearchBar from "./components/SearchBar";
-// import ShortcutIcons from "./components/ShortcutIcons";
-// import "./App.css";
-// import MainPage from "./components/mainpage";
-
-// const App = () => {
-//   return (
-//     <div className="background">
-//       {/* <Navbar />
-//       <div className="content">
-//         <SearchBar />
-//         <ShortcutIcons />
-//       </div> */}
-//     <MainPage/>
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
 import React from 'react';
 import './App.css';
 import Header from './components/header';
