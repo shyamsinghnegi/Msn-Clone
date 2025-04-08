@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+// import React from "react";
+// import Navbar from "./components/Navbar";
+// import SearchBar from "./components/SearchBar";
+// import ShortcutIcons from "./components/ShortcutIcons";
+// import "./App.css";
+// import MainPage from "./components/mainpage";
+
+// const App = () => {
+//   return (
+//     <div className="background">
+//       {/* <Navbar />
+//       <div className="content">
+//         <SearchBar />
+//         <ShortcutIcons />
+//       </div> */}
+//     <MainPage/>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+import React from 'react';
 import './App.css';
+import Header from './components/header';
+import IconsGrid from './components/icongrid';
+import SearchBox from './components/searchbox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <SearchBox />
+      <IconsGrid />
     </div>
   );
 }

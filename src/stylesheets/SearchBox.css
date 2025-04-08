@@ -1,0 +1,61 @@
+.search-container {
+    max-width: 600px;
+    margin: 50px auto 0;
+    text-align: center;
+  }
+  
+  .search-input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-box {
+    width: 100%;
+    padding: 12px 50px 12px 50px;
+    font-size: 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .search-box:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .search-icon:hover {
+    color: #0067b8;
+  }
+  
+  .copilot-button {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1;
+  }
+  
+  .copilot-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    opacity: 0.7;
+  }
+  
+  .copilot-button:hover .copilot-icon {
+    opacity: 1;
+  }
