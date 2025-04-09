@@ -112,4 +112,4 @@
     );
     };
 
-    export default IconsGrid;
+    export default IconsGrid;   

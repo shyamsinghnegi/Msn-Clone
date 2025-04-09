@@ -1,47 +1,32 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import '../stylesheets/SearchBox.css';
 
 const SearchBox = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
-  const performSearch = () => {
-    if (searchQuery.trim() !== '') {
-      window.open(`https://www.bing.com/search?q=${encodeURIComponent(searchQuery)}`);
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`);
     }
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  };
-
-  const openCopilot = () => {
-    window.open('https://copilot.microsoft.com');
   };
 
   return (
-    <div className="search-container">
+    <form onSubmit={handleSearch} className="search-container">
       <div className="search-input-container">
-        <FaSearch className="search-icon" onClick={performSearch} />
+        <FaSearch className="search-icon" onClick={handleSearch} />
         <input
           type="text"
           className="search-box"
           placeholder="Search the web"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={handleKeyPress}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="copilot-button" onClick={openCopilot}>
-          <img 
-            src="https://adoption.microsoft.com/wp-content/uploads/2023/09/icon-copilot.svg" 
-            alt="Microsoft Copilot" 
-            className="copilot-icon"
-          />
-        </button>
       </div>
-    </div>
+    </form>
   );
 };
 
